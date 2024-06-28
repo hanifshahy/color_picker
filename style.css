@@ -1,0 +1,13 @@
+h2 {
+  text-align: center;
+}
+
+.area {
+  width: 200px;
+  height: 100px;
+  border: solid;
+}
+
+#rgb-output-color {
+  background-color: rgb(100, 150, 200);
+}
