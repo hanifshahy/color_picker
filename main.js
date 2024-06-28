@@ -1,5 +1,5 @@
 
-var rgb = {
+let rgb = {
   redSet() {
     let rgbRedOutputNumber = document.getElementById('rgb-red-output-number');
     let rgbRedInputRange = document.getElementById('rgb-red-input-range');
@@ -21,11 +21,11 @@ var rgb = {
     rgb.colorSet();
   }
   ,
-  colorSet() {
+  colorSet(alpha=1) {
     let rbgOutputColor = document.getElementById('rgb-output-color');
     let red = document.getElementById('rgb-red-input-range').value;
     let green = document.getElementById('rgb-green-input-range').value;
     let blue = document.getElementById('rgb-blue-input-range').value;
-    rbgOutputColor.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    rbgOutputColor.style.backgroundColor = `rgb(${red},${green},${blue},${alpha})`;
   }
 }
