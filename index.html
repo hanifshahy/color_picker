@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker System</title>
+  <style>
+    .area {
+      width: 200px;
+      height: 100px;
+      border: solid;
+    }
+
+    #rgb-output-color {
+      background-color: rgb(100, 150, 200);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <h2 style="text-align: center;">rgb</h2>
+  <hr>
+  <!-- Red -->
+  <h3>Red ( r )</h3>
+  <span> 0 <input oninput="rgb.redSet()" type="range" name="rgb-red-input-range" id="rgb-red-input-range" min="0"
+      max="255" value="100"> 255</span>
+  <p id="rgb-red-output-number">100</p>
+  <!-- Green -->
+  <h3>Green ( g )</h3>
+  <span>0 <input oninput="rgb.greenSet()" type="range" name="rgb-green-input-range" id="rgb-green-input-range" min="0"
+      max="255" value="150"> 255</span>
+  <p id="rgb-green-output-number">150</p>
+  <!-- Blue -->
+  <h3>Blue ( b )</h3>
+  <span>0 <input type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range" id="rgb-blue-input-range" min="0"
+      max="255" value="200">
+    255</span>
+  <p id="rgb-blue-output-number">200</p>
+  <h3>Output</h3>
+  <div class="area" id="rgb-output-color"></div>
+  <!-- <button onclick="document.getElementById('rgb-output-color').style.backgroundColor='red'">sda</button> -->
+  <script>
+
+    var rgb = {
+      redSet() {
+        let rgbRedOutputNumber = document.getElementById('rgb-red-output-number');
+        let rgbRedInputRange = document.getElementById('rgb-red-input-range');
+        rgbRedOutputNumber.innerHTML = rgbRedInputRange.value;
+        rgb.colorSet();
+      }
+      ,
+      greenSet() {
+        let rgbGreenOutputNumber = document.getElementById('rgb-green-output-number');
+        let rgbGreenInputRange = document.getElementById('rgb-green-input-range');
+        rgbGreenOutputNumber.innerHTML = rgbGreenInputRange.value;
+        rgb.colorSet();
+      }
+      ,
+      blueSet() {
+        let rgbBlueOutputNumber = document.getElementById('rgb-blue-output-number');
+        let rgbBlueInputRange = document.getElementById('rgb-blue-input-range');
+        rgbBlueOutputNumber.innerHTML = rgbBlueInputRange.value;
+        rgb.colorSet();
+      }
+      ,
+      colorSet() {
+        let rbgOutputColor = document.getElementById('rgb-output-color');
+        let red = document.getElementById('rgb-red-input-range').value;
+        let green = document.getElementById('rgb-green-input-range').value;
+        let blue = document.getElementById('rgb-blue-input-range').value;
+        rbgOutputColor.style.backgroundColor = `rgb(${red},${green},${blue})`;
+      }
+    }
+
+  </script>
+</body>
+
+</html>
