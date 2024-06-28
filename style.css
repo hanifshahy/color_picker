@@ -11,3 +11,7 @@ h2 {
 #rgb-output-color {
   background-color: rgb(100, 150, 200);
 }
+.parameter-area{
+  display: inline-block;
+  margin: 0px 12px;
+}

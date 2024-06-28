@@ -14,22 +14,28 @@
   <!-- Header -->
   <h2>rgb</h2>
   <hr>
-  <!-- Red -->
-  <h3>Red ( r )</h3>
-  <span> 0 <input oninput="rgb.redSet()" type="range" name="rgb-red-input-range" id="rgb-red-input-range" min="0"
-      max="255" value="100"> 255</span>
-  <p id="rgb-red-output-number">100</p>
-  <!-- Green -->
-  <h3>Green ( g )</h3>
-  <span>0 <input oninput="rgb.greenSet()" type="range" name="rgb-green-input-range" id="rgb-green-input-range" min="0"
-      max="255" value="150"> 255</span>
-  <p id="rgb-green-output-number">150</p>
-  <!-- Blue -->
-  <h3>Blue ( b )</h3>
-  <span>0 <input type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range" id="rgb-blue-input-range" min="0"
-      max="255" value="200">
-    255</span>
-  <p id="rgb-blue-output-number">200</p>
+  <div class="parameter-area">
+    <!-- Red -->
+    <h3>Red ( r )</h3>
+    <span> 0 <input oninput="rgb.redSet()" type="range" name="rgb-red-input-range" id="rgb-red-input-range" min="0"
+        max="255" value="100"> 255</span>
+    <p id="rgb-red-output-number">100</p>
+  </div>
+  <div class="parameter-area">
+    <!-- Green -->
+    <h3>Green ( g )</h3>
+    <span>0 <input oninput="rgb.greenSet()" type="range" name="rgb-green-input-range" id="rgb-green-input-range" min="0"
+        max="255" value="150"> 255</span>
+    <p id="rgb-green-output-number">150</p>
+  </div>
+  <div class="parameter-area">
+    <!-- Blue -->
+    <h3>Blue ( b )</h3>
+    <span>0 <input type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range" id="rgb-blue-input-range" min="0"
+        max="255" value="200">
+      255</span>
+    <p id="rgb-blue-output-number">200</p>
+  </div>
   <h3>Output</h3>
   <div class="area" id="rgb-output-color"></div>
   hsl
