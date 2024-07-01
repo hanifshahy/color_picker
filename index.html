@@ -14,6 +14,13 @@
   <!-- Header -->
   <h2>rgb</h2>
   <hr>
+  <span>
+    <label for="rgb-selection">RGB</label>
+    <input onclick="rgb.prepareRgb()" type="radio" name="rgb-or-rgba" id="rgb-selection"> |
+    <label for="rgba-selection">RGBA</label>
+    <input checked  onclick="rgb.prepareRgba()" type="radio" name="rgb-or-rgba" id="rgba-selection" >
+  </span>
+  <br>
   <div class="parameter-area">
     <!-- Red -->
     <h3>Red ( r )</h3>
@@ -31,13 +38,20 @@
   <div class="parameter-area">
     <!-- Blue -->
     <h3>Blue ( b )</h3>
-    <span>0 <input type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range" id="rgb-blue-input-range" min="0"
+    <span> 0 <input type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range" id="rgb-blue-input-range" min="0"
         max="255" value="200">
       255</span>
     <p id="rgb-blue-output-number">200</p>
   </div>
+  <div id="rgb-alpha-area" class="parameter-area">
+    <span>0.0 <input oninput="rgb.alphaSet()" type="range" value="100" min="0" max="100" id="rgb-alpha-input-range"
+        name="rgb-input-input-range" > 1.0</span>
+    <p id="rgb-alpha-output-number">1.0</p>
+  </div>
   <h3>Output</h3>
-  <div class="area" id="rgb-output-color"></div>
+  <div class="background-area">
+    <div class="area" id="rgb-output-color"></div>
+  </div>
   <script src="main.js">
   </script>
 </body>

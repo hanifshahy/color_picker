@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test file</title>
+</head>
+
+<body>
+  <input type="radio" name="select" id="first">
+  <input checked type="radio" name="select" id="last">
+  <br>
+  <button onclick="f2()">press</button>
+  <script>
+    function f() {
+      let first = document.getElementById('first');
+      let last = document.getElementById('last');
+      last.checked = false;
+    } f();
+    function f2() {
+      let first = document.getElementById('first');
+      let last = document.getElementById('last');
+      alert(last.checked);
+    }
+  </script>
+</body>
+
+</html>
