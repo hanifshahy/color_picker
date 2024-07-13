@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Color Picker System</title>
   <link rel="stylesheet" href="styles/custom/style.css">
-  <style>
-  </style>
+  <style></style>
+  <link rel="stylesheet" href="styles/packages/bootstrap/css/bootstrap.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <label for="rgb-selection">RGB</label>
     <input onclick="rgb.prepareRgb()" type="radio" name="rgb-or-rgba" id="rgb-selection"> |
     <label for="rgba-selection">RGBA</label>
-    <input checked  onclick="rgb.prepareRgba()" type="radio" name="rgb-or-rgba" id="rgba-selection" >
+    <input checked onclick="rgb.prepareRgba()" type="radio" name="rgb-or-rgba" id="rgba-selection">
   </span>
   <br>
   <div class="parameter-area">
@@ -45,15 +45,15 @@
   </div>
   <div id="rgb-alpha-area" class="parameter-area">
     <span>0.0 <input oninput="rgb.alphaSet()" type="range" value="100" min="0" max="100" id="rgb-alpha-input-range"
-        name="rgb-input-input-range" > 1.0</span>
+        name="rgb-input-input-range"> 1.0</span>
     <p id="rgb-alpha-output-number">1.0</p>
   </div>
   <h3>Output</h3>
   <div class="background-area">
     <div class="area" id="rgb-output-color"></div>
   </div>
-  <script src="scripts/custom/main.js">
-  </script>
+  <script src="scripts/packages/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="scripts/custom/main.js"></script>
 </body>
 
 </html>

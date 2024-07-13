@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test file</title>
+  <link rel="stylesheet" href="styles/packages/bootstrap/css/bootstrap.css">
 </head>
 
 <body>
   <input type="radio" name="select" id="first">
   <input checked type="radio" name="select" id="last">
   <br>
-  <button onclick="f2()">press</button>
+  <button class="btn btn-success" onclick="f2()">press</button>
+
+  <script src="scripts/packages/bootstrap/js/bootstrap.bundle.js"></script>
   <script>
     function f() {
       let first = document.getElementById('first');
