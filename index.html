@@ -12,14 +12,20 @@
 
 <body>
   <!-- Header -->
-  <h2>rgb</h2>
+  <h2>RGB & RGBA</h2>
   <hr>
-  <span>
-    <label for="rgb-selection">RGB</label>
-    <input onclick="rgb.prepareRgb()" type="radio" name="rgb-or-rgba" id="rgb-selection"> |
-    <label for="rgba-selection">RGBA</label>
-    <input checked onclick="rgb.prepareRgba()" type="radio" name="rgb-or-rgba" id="rgba-selection">
-  </span>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <label for="rgb-selection">RGB</label>
+        <input onclick="rgb.prepareRgb()" type="radio" name="rgb-or-rgba" id="rgb-selection">
+      </div>
+      <div class="col">
+        <label for="rgba-selection">RGBA</label>
+        <input checked onclick="rgb.prepareRgba()" type="radio" name="rgb-or-rgba" id="rgba-selection">
+      </div>
+    </div>
+  </div>
   <br>
   <div class="parameter-area">
     <!-- Red -->
