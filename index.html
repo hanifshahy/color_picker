@@ -16,7 +16,7 @@
   <hr>
   <!-- Selection -->
   <div class="container">
-    <div class="row">
+    <div class="row justify-">
       <div class="col">
         <label for="rgb-selection">RGB</label>
         <input onclick="rgb.prepareRgb()" type="radio" name="rgb-or-rgba" id="rgb-selection">
@@ -26,40 +26,42 @@
         <input checked onclick="rgb.prepareRgba()" type="radio" name="rgb-or-rgba" id="rgba-selection">
       </div>
     </div>
-  </div>
-  <br>
-  <!-- Red -->
-  <div class="parameter-area">
-    <label class="form-label" for="rgb-red-input-range">Red ( r )</label>
-    <input class="form-range" oninput="rgb.redSet()" type="range" name="rgb-red-input-range" id="rgb-red-input-range"
-      min="0" max="255" value="100">
-    <p class="bg-primary" id="rgb-red-output-number">100</p>
-  </div>
-  <!-- Green -->
-  <div class="parameter-area">
-    <label class="form-label" for="rgb-green-input-range">Green ( g )</label>
-    <input class="form-range" oninput="rgb.greenSet()" type="range" name="rgb-green-input-range"
-      id="rgb-green-input-range" min="0" max="255" value="150">
-    <p class="bg-primary" id="rgb-green-output-number">150</p>
-  </div>
-  <!-- Blue -->
-  <div class="parameter-area">
-    <label class="form-label" for="rgb-blue-input-range">Blue ( b )</label>
-    <input class="form-range" type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range" id="rgb-blue-input-range"
-      min="0" max="255" value="200">
-    <p class="bg-primary" id="rgb-blue-output-number">200</p>
-  </div>
-  <!-- Alpha -->
-  <div id="rgb-alpha-area" class="parameter-area">
-    <label for="rgb-alpha-input-range" class="form-label">Alpha or Opacity</label>
-    <input class="form-range" oninput="rgb.alphaSet()" type="range" value="100" min="0" max="100" name="rgb-input-input-range"
-      id="rgb-alpha-input-range">
-    <p class="bg-primary" id="rgb-alpha-output-number">1.0</p>
-  </div>
-  <!-- Color Output -->
-  <h3>Output</h3>
-  <div class="background-area">
-    <div class="area" id="rgb-output-color"></div>
+    <div class="row">
+      <br>
+      <!-- Red -->
+      <div class="parameter-area col-10 col-sm-6 col-md-4 col-lg-3">
+        <label class="form-label" for="rgb-red-input-range">Red ( r )</label>
+        <input class="form-range" oninput="rgb.redSet()" type="range" name="rgb-red-input-range"
+          id="rgb-red-input-range" min="0" max="255" value="100">
+        <p class="bg-primary" id="rgb-red-output-number">100</p>
+      </div>
+      <!-- Green -->
+      <div class="parameter-area parameter-area col-10 col-sm-6 col-md-4 col-lg-3">
+        <label class="form-label" for="rgb-green-input-range">Green ( g )</label>
+        <input class="form-range" oninput="rgb.greenSet()" type="range" name="rgb-green-input-range"
+          id="rgb-green-input-range" min="0" max="255" value="150">
+        <p class="bg-primary" id="rgb-green-output-number">150</p>
+      </div>
+      <!-- Blue -->
+      <div class="parameter-area col-10 col-sm-6 col-md-4 col-lg-3">
+        <label class="form-label" for="rgb-blue-input-range">Blue ( b )</label>
+        <input class="form-range" type="range" oninput="rgb.blueSet()" name="rgb-blue-input-range"
+          id="rgb-blue-input-range" min="0" max="255" value="200">
+        <p class="bg-primary" id="rgb-blue-output-number">200</p>
+      </div>
+      <!-- Alpha -->
+      <div id="rgb-alpha-area" class="parameter-area  col-10 col-sm-6 col-md-4 col-lg-3">
+        <label for="rgb-alpha-input-range" class="form-label">Alpha or Opacity</label>
+        <input class="form-range" oninput="rgb.alphaSet()" type="range" value="100" min="0" max="100"
+          name="rgb-input-input-range" id="rgb-alpha-input-range">
+        <p class="bg-primary" id="rgb-alpha-output-number">1.0</p>
+      </div>
+    </div>
+    <!-- Color Output -->
+    <h3>Output</h3>
+    <div class="background-area">
+      <div class="area" id="rgb-output-color"></div>
+    </div>
   </div>
   <!-- Scripts -->
   <script src="scripts/packages/bootstrap/js/bootstrap.bundle.js"></script>
